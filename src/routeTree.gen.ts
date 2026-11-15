@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CafeRouteImport } from './routes/cafe'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as CursosRouteImport } from './routes/cursos'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,11 @@ const CursosRoute = CursosRouteImport.update({
   path: '/cursos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/cafe': typeof CafeRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/cafe': typeof CafeRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   '/cafe': typeof CafeRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cafe' | '/contato' | '/cursos' | '/sobre'
+  fullPaths: '/' | '/cafe' | '/contato' | '/cursos' | '/privacidade' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cafe' | '/contato' | '/cursos' | '/sobre'
-  id: '__root__' | '/' | '/cafe' | '/contato' | '/cursos' | '/sobre'
+  to: '/' | '/cafe' | '/contato' | '/cursos' | '/privacidade' | '/sobre'
+  id:
+    | '__root__'
+    | '/'
+    | '/cafe'
+    | '/contato'
+    | '/cursos'
+    | '/privacidade'
+    | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +92,7 @@ export interface RootRouteChildren {
   CafeRoute: typeof CafeRoute
   ContatoRoute: typeof ContatoRoute
   CursosRoute: typeof CursosRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -109,6 +126,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CursosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -124,6 +148,7 @@ const rootRouteChildren: RootRouteChildren = {
   CafeRoute: CafeRoute,
   ContatoRoute: ContatoRoute,
   CursosRoute: CursosRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
