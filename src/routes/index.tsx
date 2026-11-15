@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
 const numeros = [
   ["40+", "anos de trajetória profissional"],
   ["2.200h", "capacitando empreendedores"],
-  ["4.000", "máquinas geridas na DAB Coffee"],
+  ["55.000+", "equipamentos de infusão sob gestão na Fresenius Kabi Brasil (2009–2015)"],
   ["Três Corações · Nespresso", "experiência em café"],
 ];
 
