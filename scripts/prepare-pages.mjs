@@ -35,4 +35,9 @@ const csp = ["default-src 'self'", `script-src 'self' ${[...hashes].join(' ')}`,
 if (Buffer.byteLength(csp, 'utf8') > 1900) throw new Error('CSP excedeu o limite previsto. Revisar política antes de publicar.');
 const headers = fs.readFileSync('dist-pages/_headers', 'utf8').replace(/^\s+Content-Security-Policy:.*$/m, `  Content-Security-Policy: ${csp}`);
 fs.writeFileSync('dist-pages/_headers', headers);
+// Keep new projects and review builds out of search results until the domain
+// and redirects are validated. Enable indexing explicitly for the launch build.
+if (process.env.JJCAFE_ALLOW_INDEXING !== 'true') {
+  fs.appendFileSync('dist-pages/_headers', '  X-Robots-Tag: noindex, nofollow\n');
+}
 console.log('Saída estática preparada em dist-pages. Ainda requer teste no navegador e homologação.');
