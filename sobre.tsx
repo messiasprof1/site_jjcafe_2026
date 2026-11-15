@@ -7,15 +7,15 @@ export const Route = createFileRoute("/sobre")({
 });
 
 const trajetoria = [
-  ["2020 – atual", "IBS · Programa Sebrae", "Professor de empreendedorismo. Mais de 2.200 horas capacitando empreendedores na região de Sorocaba."],
+  ["2020 – atual", "IBS · Programa Sebrae", "Professor de empreendedorismo nos programas Primeiros Passos, Descomplique, Organize seu Negócio e Pronta para Crescer. Mais de 2.200 horas de capacitação de empreendedores nas regiões de Sorocaba e Botucatu."],
   ["2020 – atual", "JJ Café Produtos e Serviços", "Venda de café em grão, locação de máquinas espresso, assistência técnica e consultoria financeira, organizacional, administrativa e de processos."],
-  ["2015 – 2016", "Café Três Corações", "Gerente Nacional de Pós-Venda, com operações HORECA e Food Solutions em todo o Brasil."],
+  ["2015 – 2016", "Café Três Corações", "Gerente Nacional de Pós-Venda das máquinas TRES, com atuação também nas operações HORECA e Food Solutions em todo o Brasil. Gestão de equipes, centros técnicos próprios e parceiros, níveis de serviço e suporte à adequação dos equipamentos às necessidades de cada negócio."],
   ["2009 – 2015", "Fresenius Kabi Brasil", "Administrador de operações, com gestão de mais de 55.000 equipamentos de infusão, contratos de locação e comodato, logística e pós-venda. Criação de projeto RFID para controle de ativos em poder de terceiros."],
-  ["2008 – 2009", "Projeto General Motors", "Consultor de processos em concessionárias Chevrolet com Kaizen."],
-  ["2007 – 2008", "CAIC · Operação de atendimento Nespresso", "Gerente geral na implantação da operação de assistência técnica e pós-venda, com formação da equipe e organização da logística de atendimento."],
-  ["2004 – 2007", "UNIP · Universidade Paulista", "Professor universitário em cursos de graduação e gestão, com disciplinas de qualidade, logística, liderança e administração de processos."],
+  ["2008 – 2009", "Projeto General Motors · Concessionárias Chevrolet", "Consultor responsável pela aplicação de melhoria contínua nos processos das concessionárias. Atuação na estruturação de processos de seleção, implantação da gestão à vista dos resultados de vendas e elaboração de planos de benefícios para vendedores. Aplicação de 5S na organização e padronização visual das concessionárias."],
+  ["2007 – 2008", "CAIC · Operação Nespresso", "Gerente geral na implantação da primeira assistência técnica da Nespresso no Brasil, com formação da equipe e estruturação dos processos de pós-venda. Responsável pela implantação de equipamentos profissionais em restaurantes e boutiques, com foco nas exigências do mercado de luxo."],
+  ["2004 – 2007", "UNIP · Universidade Paulista", "Professor universitário em cursos de graduação e gestão. Disciplinas de gestão de estoques, qualidade, logística, liderança, relacionamento interpessoal, administração de processos e processos de seleção."],
   ["2002 – 2007", "DAB Coffee", "Gerente de operações: gestão de 155 colaboradores e atendimento a uma carteira de 1.300 clientes, com 4.000 máquinas em 2.700 pontos de venda."],
-  ["1995 – 2002", "Accor · Dalkia Infra 4", "Gestão regional de infraestrutura com 480 colaboradores indiretos."],
+  ["1995 – 2002", "Accor · Dalkia Infra 4", "Desenvolvimento, implantação e gestão de projetos de facilities, integrando serviços de infraestrutura e equipes multidisciplinares, com gestão indireta de 480 colaboradores. Atuação em operações de empresas como 3M, DuPont, World Trade Center, Votorantim Papel e Celulose, Bradesco Cidade de Deus, TV Bandeirantes, Heublein e Fairway Filamentos."],
   ["1985 – 1993", "Metalúrgica Taunus", "Atuação do desenho técnico à coordenação de processos de produção, com desenvolvimento de produtos, equipes polivalentes e programação de corte a laser."],
 ];
 
@@ -43,7 +43,7 @@ function Sobre() {
       <section className="mx-auto max-w-4xl px-6">
         <h2 className="text-3xl text-primary">Experiência aplicada ao seu negócio</h2>
         <div className="mt-6 space-y-4 text-muted-foreground">
-          <p>Desde 2020, à frente da JJ Café, conecto café em grão, locação de máquinas espresso e assistência técnica à consultoria financeira, organizacional, administrativa e de processos. O atendimento inclui contratos, layout e implantação de ERP Omie, conforme o escopo acordado. Também ministro aulas de empreendedorismo pela IBS nos programas do Sebrae, com mais de 2.200 horas de capacitação registradas no meu currículo de junho de 2026.</p>
+          <p>Desde 2020, à frente da JJ Café, conecto café em grão, locação de máquinas espresso e assistência técnica à consultoria financeira, organizacional, administrativa e de processos. O atendimento inclui contratos, layout e implantação de ERP Omie, conforme o escopo acordado. Também ministro aulas de empreendedorismo pela IBS nos programas do Sebrae, nas regiões de Sorocaba e Botucatu, com mais de 2.200 horas de capacitação registradas no meu currículo de junho de 2026.</p>
           <p>Na Fresenius Kabi Brasil, atuei na gestão de mais de 55.000 equipamentos de infusão e criei um projeto RFID para controle de ativos em poder de terceiros. Essa experiência em contratos, locação e comodato, logística e pós-venda contribui para analisar a operação e organizar o acompanhamento de ativos.</p>
           <p>Na consultoria, trago a prática de melhoria contínua em processos, treinamento de equipes e indicadores de gestão, incluindo atuação em projeto para concessionárias Chevrolet e docência universitária na UNIP.</p>
         </div>
@@ -53,7 +53,7 @@ function Sobre() {
           <li><strong className="text-foreground">Melhoria de processos industriais:</strong> na Taunus, aumento de 15% na produtividade em pedidos de produtos especiais e redução de 50% no prazo de atendimento de pedidos, conforme resultados relatados no currículo (1985–1993).</li>
           <li><strong className="text-foreground">Tecnologia aplicada à operação:</strong> criação de projeto RFID para controle de ativos em poder de terceiros na Fresenius Kabi Brasil (2009–2015).</li>
         </ul>
-        <p className="mt-5 text-sm text-muted-foreground">Dados históricos da trajetória profissional. As experiências citadas não representam vínculos comerciais atuais das empresas com a JJ Café nem garantia de resultados futuros.</p>
+        <p className="mt-5 text-sm text-muted-foreground">Dados históricos da trajetória profissional. As empresas mencionadas contextualizam experiências anteriores e não representam clientes ou parceiros atuais da JJ Café. Resultados históricos não constituem garantia de resultados futuros.</p>
         <h2 className="mt-14 text-3xl text-primary">Trajetória selecionada</h2>
         <ol className="mt-8 space-y-8 border-l border-border pl-8">
           {trajetoria.map(([ano, emp, desc]) => (
