@@ -21,7 +21,7 @@ const links = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+    <header className="top-0 z-50 border-b border-border bg-background/90 backdrop-blur md:sticky">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
         <Link to="/" className="font-display text-2xl text-gold-gradient">JJ Café</Link>
         <nav aria-label="Navegação principal" className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
@@ -52,10 +52,11 @@ export function Footer() {
           <p><a href={`tel:+${CONTATO.telefone2Intl}`}>{CONTATO.telefone2}</a></p>
           <p><a href={`mailto:${CONTATO.email}`}>{CONTATO.email}</a></p>
           <p><a href={`mailto:${CONTATO.email2}`}>{CONTATO.email2}</a></p>
-          <p><a href={`mailto:${CONTATO.sac}`}>Atendimento: {CONTATO.sac}</a></p>
+          <p><a href={`mailto:${CONTATO.sac}`}>Máquinas e produtos: {CONTATO.sac}</a></p>
         </div>
         <div className="md:text-right">
           <a href={CONTATO.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary">LinkedIn</a>
+          <p className="mt-2"><Link to="/privacidade" className="hover:text-primary underline">Privacidade</Link></p>
           <p className="mt-2">© {new Date().getFullYear()} JJ Café</p>
         </div>
       </div>
