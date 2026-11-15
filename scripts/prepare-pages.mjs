@@ -19,7 +19,13 @@ fs.writeFileSync('dist-pages/404.html', '<!doctype html><html lang="pt-BR"><meta
 // Hash only the inline scripts actually emitted by the build. Regenerate on every build.
 const hashes = new Set();
 for (const route of routes) {
-  const html = fs.readFileSync(path.join('dist-pages', route, 'index.html'), 'utf8');
+  const htmlPath = path.join('dist-pages', route, 'index.html');
+  // HTML parsing replaces literal NULs with U+FFFD before CSP checks. Escape the
+  // serialized route IDs as JavaScript unicode escapes to preserve their value.
+  // Also match the HTML parser's newline normalization before hashing scripts.
+  const html = fs.readFileSync(htmlPath, 'utf8').replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi,
+    (_, attrs, code) => `<script${attrs}>${code.replace(/\u0000/g, '\\u0000').replace(/\r\n?/g, '\n')}</script>`);
+  fs.writeFileSync(htmlPath, html);
   for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
     if (/\bsrc\s*=/.test(match[1]) || !match[2].trim()) continue;
     hashes.add(`'sha256-${crypto.createHash('sha256').update(match[2], 'utf8').digest('base64')}'`);
