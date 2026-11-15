@@ -22,7 +22,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-6 py-16 md:py-32">
           <p className="eyebrow">José Luiz Messias Ferreira</p>
-          <h1 className="mt-5 max-w-3xl text-5xl leading-tight md:text-7xl">
+          <h1 className="mt-5 max-w-3xl text-4xl leading-tight sm:text-5xl md:text-7xl">
             Café, máquinas e conhecimento <span className="text-gold-gradient italic">para o seu negócio</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">

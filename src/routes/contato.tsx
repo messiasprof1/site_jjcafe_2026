@@ -14,7 +14,7 @@ function Contato() {
         <WhatsButton label={`WhatsApp ${CONTATO.telefone}`} />
         <p className="pt-6"><a className="text-primary hover:underline" href={`mailto:${CONTATO.email}`}>{CONTATO.email}</a></p>
         <p><a className="text-primary hover:underline" href={`mailto:${CONTATO.email2}`}>{CONTATO.email2}</a></p>
-        <p><a className="text-primary hover:underline" href={`mailto:${CONTATO.sac}`}>Atendimento: {CONTATO.sac}</a></p>
+        <p><a className="text-primary hover:underline" href={`mailto:${CONTATO.sac}`}>Máquinas e produtos: {CONTATO.sac}</a></p>
         <p><a className="text-primary hover:underline" href={`tel:+${CONTATO.telefone2Intl}`}>Telefone: {CONTATO.telefone2}</a></p>
         <p className="text-muted-foreground">Atendimento na Região Metropolitana de Sorocaba – SP</p>
         <p className="text-sm text-muted-foreground">Ao abrir o WhatsApp ou seu aplicativo de e-mail, você passa a utilizar esses serviços. Envie apenas as informações necessárias ao atendimento.</p>
