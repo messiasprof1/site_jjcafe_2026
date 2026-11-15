@@ -10,6 +10,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // The final artifact is a static export. Keep the prerender helper layout
+  // stable even when Cloudflare Pages sets its own platform environment flags.
+  nitro: { preset: "cloudflare-module" },
   tanstackStart: {
     // Institutional routes can be exported for Pages without a server runtime.
     prerender: {
